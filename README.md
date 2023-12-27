@@ -16,14 +16,24 @@ source venv/bin/activate
 
 ```shell
 pip install --upgrade pip && pip install wheel
-
-pip install git+https://github.com/Lord-Psarris/fast-azure-client.git
 pip install git+https://github.com/Lord-Psarris/dynamics365-client.git
 ```
 
 ## Usage
 
-...
+```python
+from dynamics365_client import MicrosoftServicesClient
+
+client = MicrosoftServicesClient(environment_url="<dynamics-crm-url>", email="<sso-email>", password="<sso-password>",
+                                 client_id="<azure-app-registration-client-id>",
+                                 client_secret="<azure-app-registration-client-secret>", tenant_id="<azure-tenant-id>")
+
+# get item from dynamics
+print(client.get("leads"))
+
+# get items using id
+print(client.get("leads", "0000000-0000-0000-00000000000"))
+```
 
 ## Contributing
 
