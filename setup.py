@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 setup(
     name="dynamics365_client",
     version="1.2.2",
-    description="The dynamics ms client helps integrations with ms services apis like crm and sustainability",
+    description="The dynamics ms client helps integrations with ms services apis like crm",
     long_description=description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
